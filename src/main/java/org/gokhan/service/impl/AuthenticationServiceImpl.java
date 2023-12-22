@@ -33,9 +33,10 @@ class AuthenticationServiceImpl implements AuthenticationService {
     @Override
     public JwtAuthenticationResponse signup(SignUpRequest request) {
         Set<Role> roles = getRoleList(request.getRoles());
+        String encodePassword = passwordEncoder.encode(request.getPassword());
         User user = User.builder()
                 .username(request.getEmail())
-                .encryptedPassword(passwordEncoder.encode(request.getPassword()))
+                .encryptedPassword(encodePassword)
                 .roles(roles)
                 .build();
         user = userService.save(user);
