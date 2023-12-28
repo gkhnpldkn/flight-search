@@ -14,7 +14,7 @@ public class JwtAuthenticationResponse {
 
     @Override
     public String toString() {
-        return "JwtAuthenticationResponse{" +
+        return "gökanın ilk tokenı{" +
                 "token='" + token + '\'' +
                 '}';
     }

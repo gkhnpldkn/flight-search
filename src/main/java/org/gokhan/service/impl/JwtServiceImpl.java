@@ -16,9 +16,9 @@ import java.util.Map;
 import java.util.function.Function;
 
 @Service
-public class JwtServiceImpl implements JwtService {
+class JwtServiceImpl implements JwtService {
 
-    private String jwtSigningKey;
+    private String jwtSigningKey = "0nnlOYh4dzRlNYHSRz+joJwcni1a5L4QiAxvHMG/oAI=";
 
     @Override
     public String extractUserName(String token) {
